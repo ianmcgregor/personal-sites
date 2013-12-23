@@ -1,5 +1,6 @@
 # Personal Sites
 
-### ianmcgregor.me
-### alwaysinbeta.org
-### tumblr themes
+### <http://ianmcgregor.me>
+### <http://alwaysinbeta.org>
+### <http://gamebygame.tumblr.com>
+### <http://mostlycoding.tumblr.com>
