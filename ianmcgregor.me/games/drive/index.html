@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>DRIVE</title>
+		
+		<style type="text/css">
+			html, body, #content { width:100%; height:100%; border:0; margin:0; padding:0;  font:100%/1.2 Helvetica, Arial; color:#FFF; background:#222; }
+			#content { width:640px; height:480px; margin:auto; }
+			#errors { padding:100px; }
+		</style>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	</head>
+
+	<body>
+		<div id="content">
+			<div id="flash-content">
+				<div id="errors">
+					<noscript>
+						<h1>JavaScript</h1>
+						<p>You are required to have JavaScript enabled in order to view this content. </p>
+					</noscript>
+					<div>
+						<h1>Flash Player</h1>
+						<p>You need the free <a href="http://www.adobe.com/go/getflashplayer">Adobe Flash Player</a> to view this content.</p>
+					</div>
+				</div>
+			</div>
+        </div>
+        
+        <script>
+        	var flashvars = {};
+			
+			var params = {};
+			params.menu = "false";
+			params.allowFullScreen = "true";
+			params.allowScriptAccess = "always";
+			//params.wmode = "opaque"; // for HTML overlay
+			params.wmode = "direct"; // for Stage3D
+			
+			var attributes = {};
+			attributes.id = "Flash";
+			attributes.name = "Flash";
+			
+			swfobject.embedSWF("Main.swf", "flash-content", "640", "480", "11.5.0", "", flashvars, params, attributes);
+        </script>
+    </body>
+</html>
