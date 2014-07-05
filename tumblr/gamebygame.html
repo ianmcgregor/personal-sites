@@ -1,32 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=720, user-scalable=yes"/>
-	<meta name="description" content="{MetaDescription}"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=720, user-scalable=yes">
+	<meta name="description" content="{MetaDescription}">
 	<title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
 	
 	<!-- DEFAULT COLORS -->
-	<meta name="color:Background" content="#ffffff"/>
-	<meta name="color:Text" content="#333333"/>
-	<meta name="color:Secondary Text" content="#777777"/>
-	<meta name="color:Tertiary Text" content="#cccccc"/>
-	<meta name="color:Links" content="#c00906"/>
-	<meta name="color:Header Background" content="#444444"/>
-	<meta name="color:Title" content="#ffffff"/>
-	<meta name="color:Description" content="#999999"/>
-	<meta name="color:Post Headers" content="#111111"/>
-	<meta name="color:Big Quote" content="#e0e0e0"/>
-	<meta name="color:Photo Border" content="#dddddd"/>
+	<meta name="color:Background" content="#ffffff">
+	<meta name="color:Text" content="#333333">
+	<meta name="color:Secondary Text" content="#777777">
+	<meta name="color:Tertiary Text" content="#cccccc">
+	<meta name="color:Links" content="#c00906">
+	<meta name="color:Header Background" content="#f0f0f0">
+	<meta name="color:Title" content="#ffffff">
+	<meta name="color:Description" content="#999999">
+	<meta name="color:Post Headers" content="#111111">
+	<meta name="color:Big Quote" content="#e0e0e0">
+	<meta name="color:Photo Border" content="#dddddd">
 	
-	<!-- Disqus Shortname -->
-	<meta name="text:Disqus Shortname" content="" />
-	<meta name="image:Background" content="">
-	
-	<link rel="shortcut icon" href="{Favicon}"/>
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
-	<link rel="apple-touch-icon" href="{PortraitURL-128}"/>
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}">
+	<link rel="apple-touch-icon" href="{PortraitURL-128}">
 	
 	<style type="text/css" media="screen">	
 		/*--[ GLOBAL TAG STYLES ]---------*/
@@ -135,13 +130,6 @@
         
 		{CustomCSS}
 	</style>
-	
-<!--[if lt IE 7]>
-	<style type="text/css" media="screen">
-		#header { background-image: none; margin-bottom: 3em; }
-		#header-shadow { display: none; }
-	</style>
-<![endif]--> 
 
     <!-- Google Analytics -->
     <script type="text/javascript">
@@ -308,35 +296,10 @@
 			<ul class="post-footer">
 				{block:NoteCount}<li><a href="{Permalink}#note-container">{NoteCountWithLabel}</a></li>{/block:NoteCount}
 				<li><a href="{Permalink}">{lang:Permalink}</a></li>
-				{block:IfDisqusShortname}<!--<li><a href="{Permalink}#disqus_thread">{lang:Comments}</a></li>-->{/block:IfDisqusShortname}
-				{block:Date}<li>{lang:Posted at FormattedTime}</li>{/block:Date}
 				{block:HasTags}
 				<li>{lang:Tagged}:{block:Tags} <a href="{TagURL}" class="tag">{Tag}</a>{/block:Tags}</li>
 				{/block:HasTags}
 			</ul> <!-- end .post-footer -->
-            
-<!-- sharing -->
-    <div class="shares">
-    <!-- Twitter -->
-    <div><a href="https://twitter.com/share" class="twitter-share-button" data-via="imcg" data-related="imcg" data-url="{Permalink}" data-text="{Title}">Tweet</a></div>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-    <!-- gPlus -->
-    <!-- Place this tag where you want the +1 button to render. -->
-    <div class="g-plusone" data-size="medium" data-href="{Permalink}"></div>
-    
-    <!-- FB -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=96606253820";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-href="{Permalink}"></div>
-    </div><!-- end .shares -->
-<!-- end sharing -->  
         
 		</div> <!-- end .post -->
 		{/block:Posts}
@@ -347,14 +310,6 @@
 			{PostNotes}
 		</div>
 		{/block:PostNotes}
-		
-		{block:IfDisqusShortname}
-    {block:Permalink}
-    <div id="disqus_thread"></div>
-    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
-    {/block:Permalink}
-    {/block:IfDisqusShortname}
 	</div> <!-- end #posts -->
 	
 	{block:Pagination}
@@ -403,24 +358,6 @@
 			<li>ER2 theme by <a href="http://cubicle17.com/">Bill Israel</a></li>
 		</div>
 	</div> <!-- end #footer -->
-	
-	{block:IfDisqusShortname}
-	<!-- Disqus -->
-  <script type="text/javascript">
-  //<![CDATA[
-  (function() {
-      var links = document.getElementsByTagName('a');
-      var query = '?';
-      for(var i = 0; i < links.length; i++) {
-      if(links[i].href.indexOf('#disqus_thread') >= 0) {
-          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-      }
-      }
-      document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-  })();
-  //]]>
-  </script>
-  {/block:IfDisqusShortname}
   
   
                <!-- custom -->
@@ -431,14 +368,8 @@
     <iframe src="http://ghbtns.com/github-btn.html?user=ianmcgregor&type=follow&count=true"
       allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
     </div><!-- end .follow -->  
-        <!-- Place this tag after the last +1 button tag. -->
-    <script type="text/javascript">
-      (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      })();
-    </script>
+       
+    <script async src="//codepen.io/assets/embed/ei.js"><script>
     <!-- end custom -->
   </body>
 </html>

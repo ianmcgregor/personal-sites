@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <!--
 
   ◯
@@ -9,28 +8,26 @@
 
 -->
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8">
     <title>{Title}{block:PostSummary} : {PostSummary}{/block:PostSummary}</title>
 
-    <meta name="color:Background" content="#fff"/>
-    <meta name="color:Text" content="#444"/>
-    <meta name="color:Secondary" content="#888"/>
-    <meta name="color:Minor" content="#bbb"/>
-    <meta name="color:Link" content="#000"/>
+    <meta name="color:Background" content="#fff">
+    <meta name="color:Text" content="#444">
+    <meta name="color:Secondary" content="#888">
+    <meta name="color:Minor" content="#bbb">
+    <meta name="color:Link" content="#000">
 
-    <meta name="font:Body" content="'Helvetica Neue', Arial, Helvetica, sans-serif"/>
+    <meta name="font:Body" content="'Helvetica Neue', Arial, Helvetica, sans-serif">
 
-    <meta name="if:Show post notes" content="1"/>
-    <meta name="if:Show the number of post notes" content="0"/>
-    <meta name="if:Semitransparent audio player" content="1"/>
-    <meta name="if:Link to liked posts" content="0"/>
-    <meta name="if:Link to theme" content="0"/>
+    <meta name="if:Show post notes" content="1">
+    <meta name="if:Show the number of post notes" content="0">
+    <meta name="if:Semitransparent audio player" content="1">
+    <meta name="if:Link to liked posts" content="0">
+    <meta name="if:Link to theme" content="0">
 
-    <meta name="text:Disqus Shortname" content="" />
-
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}">
     <link rel="icon" href="{Favicon}"/>
-    <meta name="description" content="{MetaDescription}"/>
+    <meta name="description" content="{MetaDescription}">
     <style type="text/css">
       html, body, div, span, object, iframe,
       h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -250,11 +247,6 @@
           <a href="{Permalink}">{NoteCountWithLabel}</a>
         {/block:IfShowTheNumberOfPostNotes}
 
-        {block:IfDisqusShortname}
-          <a title="Disqus comments" class="disqus-permalink"
-            href="{Permalink}#disqus_thread"></a>
-        {/block:IfDisqusShortname}
-
     </h2>
     {/block:Date}
 
@@ -344,53 +336,12 @@
     </p>
     {/block:ContentSource}
 
-    {block:Permalink}
-    {block:IfDisqusShortname}
-    <div id="disqus_thread"></div>
-    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
-    {/block:IfDisqusShortname}
-    {/block:Permalink}
-
     {block:IfShowPostNotes}
       {block:PostNotes}
         {PostNotes}
       {/block:PostNotes}
     {/block:IfShowPostNotes}
     
-    
-  <!-- sharing -->
-    <div class="shares">
-    <!-- Twitter -->
-    <div><a href="https://twitter.com/share" class="twitter-share-button" data-via="imcg" data-related="imcg" data-url="{Permalink}" data-text="{Title}">Tweet</a></div>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-    <!-- gPlus -->
-    <!-- Place this tag where you want the +1 button to render. -->
-    <div class="g-plusone" data-size="medium" data-href="{Permalink}"></div>
-    
-    <!-- Place this tag after the last +1 button tag. -->
-    <script type="text/javascript">
-      (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      })();
-    </script>
-    
-    <!-- FB -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=96606253820";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-href="{Permalink}"></div>
-    </div><!-- end .shares -->
-<!-- end sharing -->  
-
   </li>
   
   {/block:Posts}
@@ -408,21 +359,6 @@
       </div>
     </div>
 
-    {block:IfDisqusShortname}
-    <script type="text/javascript">
-      //<![CDATA[
-      (function() {
-        var links = document.getElementsByTagName('a');
-        var query = '?';
-        for(var i = 0; i < links.length; i++) {
-          if(links[i].href.indexOf('#disqus_thread') >= 0) {
-            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-          }
-        }
-        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-      })();
-    //]]>
-    </script>
-    {/block:IfDisqusShortname}
+    <script async src="//codepen.io/assets/embed/ei.js"><script>
   </body>
 </html>
